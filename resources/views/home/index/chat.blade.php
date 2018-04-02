@@ -9,7 +9,7 @@
 @section('content')
     <!-- 左侧列表开始 -->
     <div class="col-xs-12 col-md-12 col-lg-8 b-chat">
-        <div class="b-chat-left">
+        <div class="b-chat-left" style="border-right: 3px solid #cccccc;border-radius: 3%;">
             @foreach($chat as $k => $v)
                 @if($k%2 == 0)
                     <ul class="b-chat-one animated bounceInLeft">
