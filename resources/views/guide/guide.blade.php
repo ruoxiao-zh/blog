@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="https://www.ruoxiaozh.com/images/home/favicon.ico">
     <link rel="stylesheet" href="{{ asset('/statics/guide/demo.css') }}">
     <link rel="stylesheet" href="{{ asset('/statics/guide/guide.css') }}">
+    <script src="{{ asset('statics/js/jquery-2.0.0.min.js') }}"></script>
     <script>
         // 检测访问页面
         if (/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
@@ -15,12 +16,15 @@
                 try {
                     if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
                         // 手机页面
+                        $('body').css('display', 'none');
                         window.location.href = "{{ url('blog') }}";
                     } else if (/iPad/i.test(navigator.userAgent)) {
                         // 平板页面
+                        $('body').css('display', 'none');
                         window.location.href = "{{ url('blog') }}";
                     } else {
                         // 其它移动端页面
+                        $('body').css('display', 'none');
                         window.location.href = "{{ url('blog') }}"
                     }
                 } catch (e) {

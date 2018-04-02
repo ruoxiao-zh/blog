@@ -307,6 +307,7 @@
     </div>
 </div>
 <!-- 登录模态框结束 -->
+<script src="{{ asset('statics/js/jquery-2.0.0.min.js') }}"></script>
 <script>
     // 加载完成之后移除掉
     window.onload = function() {
@@ -315,7 +316,6 @@
         $('#b-foot').css('display', 'block');
     }
 </script>
-<script src="{{ asset('statics/js/jquery-2.0.0.min.js') }}"></script>
 <script>
     logoutUrl = "{:U('Home/User/logout')}";
     $.ajaxSetup({
